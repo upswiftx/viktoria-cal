@@ -2,7 +2,11 @@
   "mannschaften": [
     {
       "kuerzel": "e-xv",
-      "name": "Viktoria Berlin XV (E-Junioren)"
+      "name": "Viktoria Berlin XV (E15)"
+    },
+    {
+      "kuerzel": "team-2",
+      "name": "Viktoria Berlin IX (D9)"
     }
   ]
 }
