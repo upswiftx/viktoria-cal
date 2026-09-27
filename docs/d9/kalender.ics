@@ -26,11 +26,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:02VPIDPKOK000000VS5489BUVVEJAKID@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260503T130000
 DTEND;TZID=Europe/Berlin:20260503T153000
-SUMMARY:⚽ Viktoria Berlin IX – BFC Dynamo V (Kiezkicker I) (Anstoß 14:
- 00)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – BFC Dynamo V (Kiezkicker I) (Anstoß
+  14:00)
 DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nKreisklasse C\nViktoria
   Berlin IX – BFC Dynamo V (Kiezkicker I) (Heimspiel)\nSpielnummer 665258
  033\nSpielinfo: https://www.fussball.de/spiel/viktoria-berlin-ix-bfc-dynam
@@ -42,10 +42,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:0307FUAJ5S000000VS5489BTVUFUQSUP@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260516T090000
 DTEND;TZID=Europe/Berlin:20260516T113000
-SUMMARY:⚽ Friedenauer TSC III – Viktoria Berlin IX (Anstoß 10:00)
+SUMMARY:D9: ⚽ Friedenauer TSC III – Viktoria Berlin IX (Anstoß 10:00)
 DESCRIPTION:Treffen: 09:00 Uhr\nAnstoß: 10:00 Uhr\nKreisfreundschaftsspiel
  e\nFriedenauer TSC III – Viktoria Berlin IX (Auswärtsspiel)\nSpielnumme
  r 860025265\nSpielinfo: https://www.fussball.de/spiel/friedenauer-tsc-iii-
@@ -57,10 +57,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:02VPIDPJKC000000VS5489BUVVEJAKID@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260607T130000
 DTEND;TZID=Europe/Berlin:20260607T153000
-SUMMARY:⚽ Viktoria Berlin IX – BSV GW Neukölln IV (Anstoß 14:00)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – BSV GW Neukölln IV (Anstoß 14:00)
 DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nKreisklasse C\nViktoria
   Berlin IX – BSV GW Neukölln IV (Heimspiel)\nSpielnummer 665258052\nSpi
  elinfo: https://www.fussball.de/spiel/viktoria-berlin-ix-bsv-gw-neukoelln-
@@ -72,10 +72,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:02VPIDPK60000000VS5489BUVVEJAKID@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260614T130000
 DTEND;TZID=Europe/Berlin:20260614T153000
-SUMMARY:⚽ Viktoria Berlin IX – SC Staaken V (Anstoß 14:00)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – SC Staaken V (Anstoß 14:00)
 DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nKreisklasse C\nViktoria
   Berlin IX – SC Staaken V (Heimspiel)\nSpielnummer 665258058\nSpielinfo:
   https://www.fussball.de/spiel/viktoria-berlin-ix-sc-staaken-v/-/spiel/02V
@@ -87,10 +87,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:02VPIDPJSK000000VS5489BUVVEJAKID@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260621T110000
 DTEND;TZID=Europe/Berlin:20260621T133000
-SUMMARY:⚽ Viktoria Berlin IX – FC Hertha 03 IV (Anstoß 12:00)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – FC Hertha 03 IV (Anstoß 12:00)
 DESCRIPTION:Treffen: 11:00 Uhr\nAnstoß: 12:00 Uhr\nKreisklasse C\nViktoria
   Berlin IX – FC Hertha 03 IV (Heimspiel)\nSpielnummer 665258064\nSpielin
  fo: https://www.fussball.de/spiel/viktoria-berlin-ix-fc-hertha-03-iv/-/spi
@@ -102,10 +102,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HERK000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260912T080000
 DTEND;TZID=Europe/Berlin:20260912T103000
-SUMMARY:⚽ SG Prenzlauer Berg V – Viktoria Berlin IX (Anstoß 09:00)
+SUMMARY:D9: ⚽ SG Prenzlauer Berg V – Viktoria Berlin IX (Anstoß 09:00)
 DESCRIPTION:Treffen: 08:00 Uhr\nAnstoß: 09:00 Uhr\nKreisklasse C\nSG Prenz
  lauer Berg V – Viktoria Berlin IX (Auswärtsspiel)\nSpielnummer 66527500
  7\nSpielinfo: https://www.fussball.de/spiel/sg-prenzlauer-berg-v-viktoria-
@@ -117,10 +117,10 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HEHK000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260919T113000
 DTEND;TZID=Europe/Berlin:20260919T140000
-SUMMARY:⚽ Viktoria Berlin IX – FC Hertha 03 IX (Anstoß 12:30)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – FC Hertha 03 IX (Anstoß 12:30)
 DESCRIPTION:Treffen: 11:30 Uhr\nAnstoß: 12:30 Uhr\nKreisklasse C\nViktoria
   Berlin IX – FC Hertha 03 IX (Heimspiel)\nSpielnummer 665275015\nSpielin
  fo: https://www.fussball.de/spiel/viktoria-berlin-ix-fc-hertha-03-ix/-/spi
@@ -132,11 +132,11 @@ TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HECS000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20260927T083000
 DTEND;TZID=Europe/Berlin:20260927T110000
-SUMMARY:⚽ SV Berlin-Chemie Adlershof IV – Viktoria Berlin IX (Anstoß 0
- 9:30)
+SUMMARY:D9: ⚽ SV Berlin-Chemie Adlershof IV – Viktoria Berlin IX (Ansto
+ ß 09:30)
 DESCRIPTION:Treffen: 08:30 Uhr\nAnstoß: 09:30 Uhr\nKreisklasse C\nSV Berli
  n-Chemie Adlershof IV – Viktoria Berlin IX (Auswärtsspiel)\nSpielnummer
   665275023\nSpielinfo: https://www.fussball.de/spiel/sv-berlin-chemie-adle
@@ -150,10 +150,11 @@ LOCATION:Kunstrasenplatz\, Fritz-Lesch-Sp. KR1\, Dörpfeldstr. 89\, 12489 B
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HE5C000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20261003T113000
 DTEND;TZID=Europe/Berlin:20261003T140000
-SUMMARY:⚽ Viktoria Berlin IX – Viktoria Mitte U12 II (Anstoß 12:30)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – Viktoria Mitte U12 II (Anstoß 12:30
+ )
 DESCRIPTION:Treffen: 11:30 Uhr\nAnstoß: 12:30 Uhr\nKreisklasse C\nViktoria
   Berlin IX – Viktoria Mitte U12 II (Heimspiel)\nSpielnummer 665275027\nS
  pielinfo: https://www.fussball.de/spiel/viktoria-berlin-ix-viktoria-mitte-
@@ -167,10 +168,10 @@ LOCATION:Kunstrasenplatz\, Stadion Lichterfelde KR1\, Ostpreußendamm 3-17\
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HDQO000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20261107T113000
 DTEND;TZID=Europe/Berlin:20261107T140000
-SUMMARY:⚽ Viktoria Berlin IX – FSV Hansa 07 V (Anstoß 12:30)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – FSV Hansa 07 V (Anstoß 12:30)
 DESCRIPTION:Treffen: 11:30 Uhr\nAnstoß: 12:30 Uhr\nKreisklasse C\nViktoria
   Berlin IX – FSV Hansa 07 V (Heimspiel)\nSpielnummer 665275038\nSpielinf
  o: https://www.fussball.de/spiel/viktoria-berlin-ix-fsv-hansa-07-v/-/spiel
@@ -184,10 +185,11 @@ LOCATION:Kunstrasenplatz\, Stadion Lichterfelde KR1\, Ostpreußendamm 3-17\
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HDLO000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20261121T113000
 DTEND;TZID=Europe/Berlin:20261121T140000
-SUMMARY:⚽ Viktoria Berlin IX – SC Berliner Amateure V (Anstoß 12:30)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – SC Berliner Amateure V (Anstoß 12:3
+ 0)
 DESCRIPTION:Treffen: 11:30 Uhr\nAnstoß: 12:30 Uhr\nKreisklasse C\nViktoria
   Berlin IX – SC Berliner Amateure V (Heimspiel)\nSpielnummer 665275045\n
  Spielinfo: https://www.fussball.de/spiel/viktoria-berlin-ix-sc-berliner-am
@@ -201,11 +203,11 @@ LOCATION:Kunstrasenplatz\, Stadion Lichterfelde KR1\, Ostpreußendamm 3-17\
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HDKS000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20261128T090000
 DTEND;TZID=Europe/Berlin:20261128T113000
-SUMMARY:⚽ BFC Dynamo VI (Kiezkicker II) – Viktoria Berlin IX (Anstoß 1
- 0:00)
+SUMMARY:D9: ⚽ BFC Dynamo VI (Kiezkicker II) – Viktoria Berlin IX (Ansto
+ ß 10:00)
 DESCRIPTION:Treffen: 09:00 Uhr\nAnstoß: 10:00 Uhr\nKreisklasse C\nBFC Dyna
  mo VI (Kiezkicker II) – Viktoria Berlin IX (Auswärtsspiel)\nSpielnummer
   665275054\nSpielinfo: https://www.fussball.de/spiel/bfc-dynamo-vi-kiezkic
@@ -219,10 +221,10 @@ LOCATION:Kunstrasenplatz\, Storkower Straße KR1\, Storkower Str. 209\, 103
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HFE0000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20261205T113000
 DTEND;TZID=Europe/Berlin:20261205T140000
-SUMMARY:⚽ Viktoria Berlin IX – Lichtenrader BC 25 V (Anstoß 12:30)
+SUMMARY:D9: ⚽ Viktoria Berlin IX – Lichtenrader BC 25 V (Anstoß 12:30)
 DESCRIPTION:Treffen: 11:30 Uhr\nAnstoß: 12:30 Uhr\nKreisklasse C\nViktoria
   Berlin IX – Lichtenrader BC 25 V (Heimspiel)\nSpielnummer 665275057\nSp
  ielinfo: https://www.fussball.de/spiel/viktoria-berlin-ix-lichtenrader-bc-
@@ -236,11 +238,11 @@ LOCATION:Kunstrasenplatz\, Stadion Lichterfelde KR1\, Ostpreußendamm 3-17\
 END:VEVENT
 BEGIN:VEVENT
 UID:031G89HFBG000000VS5489BTVVG7L386@fussball-de-ics
-DTSTAMP:20260927T083353Z
+DTSTAMP:20260927T084324Z
 DTSTART;TZID=Europe/Berlin:20261213T080000
 DTEND;TZID=Europe/Berlin:20261213T103000
-SUMMARY:⚽ FC Internationale Berlin VI – Viktoria Berlin IX (Anstoß 09:
- 00)
+SUMMARY:D9: ⚽ FC Internationale Berlin VI – Viktoria Berlin IX (Anstoß
+  09:00)
 DESCRIPTION:Treffen: 08:00 Uhr\nAnstoß: 09:00 Uhr\nKreisklasse C\nFC Inter
  nationale Berlin VI – Viktoria Berlin IX (Auswärtsspiel)\nSpielnummer 6
  65275064\nSpielinfo: https://www.fussball.de/spiel/fc-internationale-berli
