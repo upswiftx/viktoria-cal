@@ -1,0 +1,15 @@
+{
+  "einstellungen": {
+    "spieldauer_min": 90,
+    "treffen_vorlauf_min": 60,
+    "termin_modus": "ein",
+    "titel_format": "paarung"
+  },
+  "mannschaften": [
+    {
+      "kuerzel": "e-xv",
+      "name": "Viktoria Berlin XV (E-Junioren)",
+      "fussball_de": "https://www.fussball.de/mannschaft/viktoria-berlin-xv-fc-viktoria-89-berlin-berlin/-/saison/2627/team-id/02PV74CN9S000000VS5489B1VTF0A3SN"
+    }
+  ]
+}
