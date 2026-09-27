@@ -6,6 +6,13 @@ on:
     - cron: "15 4 * * *"
     - cron: "15 15 * * *"
   workflow_dispatch:   # manuell starten über den Tab "Actions"
+  push:                # automatisch, wenn Mannschaften oder Skript geändert werden
+    branches: [main]
+    paths:
+      - mannschaften.json
+      - fussball_ics.py
+      - requirements.txt
+      - .github/workflows/kalender.yml
 
 permissions:
   contents: write
@@ -41,5 +48,6 @@ jobs:
             echo "Keine Änderungen am Spielplan."
           else
             git commit -m "Spielplan aktualisiert"
+            git pull --rebase   # falls in der Zwischenzeit jemand etwas hochgeladen hat
             git push
           fi

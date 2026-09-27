@@ -68,11 +68,52 @@ Auf der Abo-Seite oben die Mannschaft wählen, dann:
 
 **iPhone:** „Im iPhone-Kalender abonnieren“ tippen und bestätigen. Das Aktualisierungsintervall lässt sich unter Einstellungen → Kalender → Accounts → Abonnierte Kalender einstellen.
 
-**Android:** „In Google Kalender abonnieren“ tippen und im Browser „Hinzufügen“ bestätigen. Google ruft abonnierte Kalender nach eigenem Takt ab, typischerweise alle 8–24 Stunden.
+**Android:** Die Google-Kalender-App kann Kalender nicht per Link abonnieren, ein Tipp auf einen Link bewirkt dort nichts. Zwei Wege funktionieren:
+- *Am Computer (kostenlos):* Kalender-Link kopieren, auf calendar.google.com links bei „Weitere Kalender“ auf „+“ → „Per URL“, Link einfügen. Danach in der Kalender-App am Handy unter Einstellungen den neuen Kalender antippen und „Synchronisieren“ einschalten. Google ruft abonnierte Kalender nach eigenem Takt ab, typischerweise alle 8–24 Stunden.
+- *Direkt am Handy:* App ICSx⁵ installieren (Play Store, kleiner Betrag; kostenlos bei F-Droid) und auf der Abo-Seite „Mit ICSx⁵ abonnieren“ tippen. Funktioniert mit jeder Kalender-App, auch Samsung, und aktualisiert schneller.
+
+Die Abo-Seite erkennt Handys: Tippt man dort auf „In Google Kalender abonnieren“, erscheint der Hinweis, den Link am Computer zu öffnen, mit „Link kopieren“ und „Per E-Mail an mich senden“. Am Computer öffnet derselbe Button direkt Google Kalender.
 
 **Mehrere Kinder:** einfach nacheinander mehrere Mannschaften abonnieren; jede erscheint als eigener Kalender mit eigener Farbe.
 
 **Direktlink für eine Mannschaft:** Nach der Auswahl steht die Mannschaft in der Adresszeile (`…/?team=e-xv`). Diesen Link kann man gezielt in die jeweilige Elterngruppe schicken.
+
+## Am Rechner mit Git arbeiten
+
+Statt Dateien im Browser hochzuladen, kann das Repository lokal gepflegt und mit `./deploy.sh` abgeglichen werden.
+
+**Einmalig einrichten (Mac, Terminal):**
+
+```bash
+git --version                     # installiert bei Bedarf die Apple-Entwicklerwerkzeuge
+brew install gh                   # GitHub-Kommandozeile (ohne Homebrew: cli.github.com)
+gh auth login                     # GitHub.com → HTTPS → im Browser anmelden
+gh auth setup-git                 # git nutzt ab jetzt diese Anmeldung
+cd ~/APPs/v89
+git clone https://github.com/upswiftx/viktoria-cal.git cal
+cd cal
+```
+
+**Danach bei jeder Änderung:**
+
+```bash
+cd ~/APPs/v89/cal
+git pull                          # neuesten Stand holen, bevor du etwas änderst
+# … Dateien bearbeiten, z. B. mannschaften.json oder docs/index.html …
+./deploy.sh "Neue Mannschaft E-XVI"
+```
+
+`deploy.sh` prüft `mannschaften.json` auf Fehler, speichert deine Änderungen, holt die Kalender-Updates des Bots und lädt alles hoch. Die Dateien `docs/*/kalender.ics`, `docs/*/spiele.json` und `docs/teams.json` schreibt nur der Bot auf GitHub. Lokal erzeugte Versionen verwirft das Skript, damit es keine Konflikte gibt.
+
+Änderungen an `mannschaften.json`, `fussball_ics.py`, `requirements.txt` oder am Workflow starten den Kalender-Abgleich automatisch. Änderungen an der Abo-Seite sind nach etwa einer Minute online.
+
+**Lokal testen (optional):**
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python fussball_ics.py --out /tmp/kalender-test   # schreibt nicht in docs/
+```
 
 ## Wenn etwas nicht klappt
 
