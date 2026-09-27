@@ -137,6 +137,9 @@
 
 <script>
 (() => {
+  const AUSBLENDEN_NACH_STUNDEN = 3;  // so lange nach dem Anstoß bleibt ein Spiel in der Liste
+  const NEU_FILTERN_MINUTEN = 5;      // bei offener Seite die Liste so oft neu filtern
+
   const basis = new URL(".", location.href);
   const $ = id => document.getElementById(id);
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; };
@@ -144,6 +147,35 @@
   const merken = { get() { try { return localStorage.getItem("team"); } catch { return null; } },
                    set(v) { try { localStorage.setItem("team", v); } catch {} } };
   let icsLink = "";
+  let geladeneSpiele = null;
+
+  // Alle Zeiten in spiele.json sind deutsche Ortszeit, egal wo das Gerät steht
+  const berlinFormat = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Berlin", hourCycle: "h23",
+    year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  function berlinTeile(ms) {
+    const t = {};
+    for (const p of berlinFormat.formatToParts(new Date(ms))) t[p.type] = p.value;
+    return t;
+  }
+  // Abstand Berlin zu UTC in ms zum Zeitpunkt ms (Sommerzeit 2 h, Winterzeit 1 h)
+  function berlinVersatz(ms) {
+    const t = berlinTeile(ms);
+    return Date.UTC(+t.year, t.month - 1, +t.day, +t.hour, +t.minute, +t.second) - Math.floor(ms / 1000) * 1000;
+  }
+  // "2026-10-25" + "13:00" in Berlin → Zeitpunkt in ms
+  function berlinZeitpunkt(datum, zeit) {
+    const [j, m, t] = datum.split("-").map(Number);
+    const [h, min] = zeit.split(":").map(Number);
+    const wand = Date.UTC(j, m - 1, t, h, min);
+    return wand - berlinVersatz(wand - berlinVersatz(wand));
+  }
+  function nochSichtbar(s, jetzt) {
+    if (!s.anstoss) {  // ohne Anstoßzeit bis zum Ende des Spieltags
+      const t = berlinTeile(jetzt);
+      return s.datum >= `${t.year}-${t.month}-${t.day}`;
+    }
+    return jetzt < berlinZeitpunkt(s.datum, s.anstoss) + AUSBLENDEN_NACH_STUNDEN * 3600000;
+  }
 
   // Je nach Gerät die passenden Buttons zeigen
   const ua = navigator.userAgent;
@@ -198,16 +230,17 @@
       history.replaceState(null, "", url);
     }
 
+    geladeneSpiele = null;
     $("liste").textContent = ""; $("liste").append(el("li", "leer", "Spiele werden geladen …"));
     fetch(new URL("spiele.json", ordner), { cache: "no-store" })
       .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(daten => zeigeSpiele(daten.spiele))
+      .then(daten => { geladeneSpiele = daten.spiele; zeigeSpiele(geladeneSpiele); })
       .catch(() => zeigeFehler("Die Spielliste ist gerade nicht erreichbar. Das Kalender-Abo funktioniert trotzdem."));
   }
 
   function zeigeSpiele(spiele) {
-    const heute = new Date(); heute.setHours(0, 0, 0, 0);
-    const kommend = spiele.filter(s => new Date(s.datum + "T00:00:00") >= heute).slice(0, 8);
+    const jetzt = Date.now();
+    const kommend = spiele.filter(s => nochSichtbar(s, jetzt)).slice(0, 8);
     const liste = $("liste"); liste.textContent = "";
     if (!kommend.length) { liste.append(el("li", "leer", "Aktuell sind keine Spiele angesetzt.")); return; }
     for (const s of kommend) {
@@ -233,6 +266,8 @@
       liste.append(li);
     }
   }
+
+  setInterval(() => { if (geladeneSpiele) zeigeSpiele(geladeneSpiele); }, NEU_FILTERN_MINUTEN * 60000);
 
   fetch(new URL("teams.json", basis), { cache: "no-store" })
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
