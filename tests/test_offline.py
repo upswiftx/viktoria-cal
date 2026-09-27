@@ -98,6 +98,13 @@ def main():
     assert str(std[1]["SUMMARY"]) == "⚽ Viktoria Berlin XIV – Viktoria Berlin XV (Anstoß 09:30)"
     assert "(Heimspiel)" in str(std[0]["DESCRIPTION"])
 
+    # Kürzel vor dem Termin
+    mit = [c for c in Calendar.from_ical(f.build_ics(games, "T", 90, "D9: ", 60)).walk("VEVENT")]
+    assert str(mit[0]["SUMMARY"]) == "D9: ⚽ Viktoria Berlin XV – 1.FC Lübars IV (Anstoß 11:00)"
+    assert str(mit[3]["SUMMARY"]).startswith("D9: ⚽ ABGESAGT: ")
+    zw = [c for c in Calendar.from_ical(f.build_ics(games, "T", 90, "D9: ", 60, "zwei")).walk("VEVENT")]
+    assert str(zw[0]["SUMMARY"]).startswith("D9: 🕐 Treffen: ")
+
     import json
     assert json.loads(f.to_json(games, "T", 60))["spiele"][0]["treffen"] == "10:00"
     print(f.to_json(games, "Test")[:400])
@@ -141,6 +148,8 @@ def test_mehrere_mannschaften(tmp: Path):
         assert (out / k / "kalender.ics").exists() and (out / k / "spiele.json").exists()
     xiv = json.loads((out / "viktoria-berlin-xiv-e-junioren" / "spiele.json").read_text())
     assert xiv["spiele"][0]["treffen"] == "10:15", "eigener Vorlauf je Mannschaft"
+    ics = (out / "e-xv" / "kalender.ics").read_text()
+    assert "SUMMARY:E-XV: ⚽ Viktoria Berlin XV – 1.FC Lübars IV" in ics, "Kürzel automatisch vorn"
     spielseiten = [u for u in aufrufe if "/spiel/" in u]
     assert len(spielseiten) == len(set(spielseiten)), "Spielorte nur einmal laden"
 

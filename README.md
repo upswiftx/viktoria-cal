@@ -60,7 +60,8 @@ Unter `einstellungen` gelten sie für alle Mannschaften. Jeder Wert lässt sich 
 | `treffen_vorlauf_min` | Treffen so viele Minuten vor Anstoß, `0` schaltet es ab |
 | `termin_modus` | `ein`: ein Termin von Treffen bis Spielende, Anstoß steht im Titel. `zwei`: getrennte Termine „Treffen“ und „Spiel“ |
 | `titel_format` | `paarung`: „Viktoria Berlin XV – 1.FC Lübars IV“ wie im Widget (Heimmannschaft zuerst). `gegner`: „Heimspiel gegen 1.FC Lübars IV“ |
-| `titel_prefix` | Text vor jedem Termin, z. B. `"XV: "` |
+| `kuerzel_im_titel` | `true` (Standard): das Kürzel steht groß vor jedem Termin, z. B. „D9: ⚽ Viktoria Berlin IX – FC X (Anstoß 11:00)“. `false` schaltet das ab |
+| `titel_prefix` | eigener Text statt des Kürzels, z. B. `"Jonas D9: "` |
 
 ## Abonnieren
 

@@ -274,13 +274,13 @@ def build_ics(games: list[dict], cal_name: str, duration_min: int, prefix: str,
 
         if meet and modus == "zwei":
             lines += vevent(f"{g['id']}-treffen", stamp, g,
-                            f"🕐 {prefix}Treffen: {title}", desc, meet, kick)
-            lines += vevent(g["id"], stamp, g, f"⚽ {prefix}{title}", desc, kick, end)
+                            f"{prefix}🕐 Treffen: {title}", desc, meet, kick)
+            lines += vevent(g["id"], stamp, g, f"{prefix}⚽ {title}", desc, kick, end)
         elif meet:
             lines += vevent(g["id"], stamp, g,
-                            f"⚽ {prefix}{title} (Anstoß {kick:%H:%M})", desc, meet, end)
+                            f"{prefix}⚽ {title} (Anstoß {kick:%H:%M})", desc, meet, end)
         else:
-            lines += vevent(g["id"], stamp, g, f"⚽ {prefix}{title}", desc, kick, end)
+            lines += vevent(g["id"], stamp, g, f"{prefix}⚽ {title}", desc, kick, end)
 
     lines.append("END:VCALENDAR")
     return "\r\n".join(fold(l) for l in lines) + "\r\n"
@@ -328,7 +328,8 @@ STANDARD = {
     "treffen_vorlauf_min": 60,
     "termin_modus": "ein",       # "ein" | "zwei"
     "titel_format": "paarung",   # "paarung" | "gegner"
-    "titel_prefix": "",
+    "titel_prefix": "",          # eigener Text vor jedem Termin; leer = Kürzel verwenden
+    "kuerzel_im_titel": True,    # "D9: " vor jeden Termin setzen
 }
 UMLAUTE = str.maketrans({"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss"})
 
@@ -399,9 +400,12 @@ def process_team(session, team: dict, out: Path, today: dt.date,
         g["venue"] = ort_cache[g["id"]]
         print(f"  {g['date']} {g['home']} – {g['away']}: {g['venue'] or 'Ort unbekannt'}")
 
+    prefix = team["titel_prefix"] or (
+        f"{team['kuerzel'].upper()}: " if team["kuerzel_im_titel"] else "")
+
     ziel = out / team["kuerzel"]
     changed = write_if_changed(ziel / "kalender.ics", build_ics(
-        ordered, team["name"], int(team["spieldauer_min"]), team["titel_prefix"],
+        ordered, team["name"], int(team["spieldauer_min"]), prefix,
         int(team["treffen_vorlauf_min"]), team["termin_modus"], team["titel_format"]))
     write_if_changed(ziel / "spiele.json", to_json(ordered, team["name"], int(team["treffen_vorlauf_min"])))
     print(f"  {len(ordered)} Spiele, Kalender {'aktualisiert' if changed else 'unverändert'}.")
