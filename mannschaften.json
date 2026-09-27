@@ -7,12 +7,12 @@
   },
   "mannschaften": [
     {
-      "kuerzel": "e-xv",
+      "kuerzel": "e15",
       "name": "Viktoria Berlin XV (E15)",
       "fussball_de": "https://www.fussball.de/mannschaft/viktoria-berlin-xv-fc-viktoria-89-berlin-berlin/-/saison/2627/team-id/02PV74CN9S000000VS5489B1VTF0A3SN"
     },
     {
-      "kuerzel": "team-2",
+      "kuerzel": "d9",
       "name": "Viktoria Berlin IX (D9)",
       "team_id": "02PV77PK4K000000VS5489B1VTF0A3SN"
     }
