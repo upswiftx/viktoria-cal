@@ -1,0 +1,549 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//fussball-de-ics//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FC Viktorie Berlin
+X-WR-TIMEZONE:Europe/Berlin
+X-PUBLISHED-TTL:PT6H
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:02TQ8EVDDK000000VS5489BTVV0LE4BT@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260503T130000
+DTEND;TZID=Europe/Berlin:20260503T153000
+SUMMARY:FC-V: ⚽ Borussia Mönchengladbach – Viktoria Berlin (Anstoß 14
+ :00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nBorussia 
+ Mönchengladbach – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 8900701
+ 65\nSpielinfo: https://www.fussball.de/spiel/borussia-moenchengladbach-vik
+ toria-berlin/-/spiel/02TQ8EVDDK000000VS5489BTVV0LE4BT
+URL:https://www.fussball.de/spiel/borussia-moenchengladbach-viktoria-berlin
+ /-/spiel/02TQ8EVDDK000000VS5489BTVV0LE4BT
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:02TQ8EVDPG000000VS5489BTVV0LE4BT@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260510T130000
+DTEND;TZID=Europe/Berlin:20260510T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – VfR SW Warbeyen 1945 e.V. (Anstoß 14
+ :00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – VfR SW Warbeyen 1945 e.V. (Heimspiel)\nSpielnummer 890070170\nS
+ pielinfo: https://www.fussball.de/spiel/viktoria-berlin-vfr-sw-warbeyen-19
+ 45-ev/-/spiel/02TQ8EVDPG000000VS5489BTVV0LE4BT
+URL:https://www.fussball.de/spiel/viktoria-berlin-vfr-sw-warbeyen-1945-ev/-
+ /spiel/02TQ8EVDPG000000VS5489BTVV0LE4BT
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:02TQ8EVEFC000000VS5489BTVV0LE4BT@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260517T130000
+DTEND;TZID=Europe/Berlin:20260517T153000
+SUMMARY:FC-V: ⚽ 1.FFC Turbine Potsdam – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\n1.FFC Tur
+ bine Potsdam – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070179\n
+ Spielinfo: https://www.fussball.de/spiel/1ffc-turbine-potsdam-viktoria-ber
+ lin/-/spiel/02TQ8EVEFC000000VS5489BTVV0LE4BT
+URL:https://www.fussball.de/spiel/1ffc-turbine-potsdam-viktoria-berlin/-/sp
+ iel/02TQ8EVEFC000000VS5489BTVV0LE4BT
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031BR5LVDG000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260705T130000
+DTEND;TZID=Europe/Berlin:20260705T153000
+SUMMARY:FC-V: ⚽ 1.FFC Turbine Potsdam – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nFreundschaftsspiele\n1.
+ FFC Turbine Potsdam – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 8800
+ 02051\nSpielinfo: https://www.fussball.de/spiel/1ffc-turbine-potsdam-vikto
+ ria-berlin/-/spiel/031BR5LVDG000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/1ffc-turbine-potsdam-viktoria-berlin/-/sp
+ iel/031BR5LVDG000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:0318J9C56G000000VS5489BUVV628VP4@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260712T120000
+DTEND;TZID=Europe/Berlin:20260712T143000
+SUMMARY:FC-V: ⚽ FC Carl Zeiss Jena – Viktoria Berlin (Anstoß 13:00)
+DESCRIPTION:Treffen: 12:00 Uhr\nAnstoß: 13:00 Uhr\nFreundschaftsspiele\nFC
+  Carl Zeiss Jena – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 8800020
+ 26\nSpielinfo: https://www.fussball.de/spiel/fc-carl-zeiss-jena-viktoria-b
+ erlin/-/spiel/0318J9C56G000000VS5489BUVV628VP4
+URL:https://www.fussball.de/spiel/fc-carl-zeiss-jena-viktoria-berlin/-/spie
+ l/0318J9C56G000000VS5489BUVV628VP4
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E64F5L4000000VS5489BUVUR5FS5A@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260719T140000
+DTEND;TZID=Europe/Berlin:20260719T163000
+SUMMARY:FC-V: ⚽ Hertha BSC – Viktoria Berlin (Anstoß 15:00)
+DESCRIPTION:Treffen: 14:00 Uhr\nAnstoß: 15:00 Uhr\nFreundschaftsspiele\nHe
+ rtha BSC – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 880002070\nSpie
+ linfo: https://www.fussball.de/spiel/hertha-bsc-viktoria-berlin/-/spiel/03
+ 1E64F5L4000000VS5489BUVUR5FS5A
+URL:https://www.fussball.de/spiel/hertha-bsc-viktoria-berlin/-/spiel/031E64
+ F5L4000000VS5489BUVUR5FS5A
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031F0K6678000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260726T130000
+DTEND;TZID=Europe/Berlin:20260726T153000
+SUMMARY:FC-V: ⚽ Eintracht Frankfurt II – Viktoria Berlin (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nFreundschaftsspiele\nEi
+ ntracht Frankfurt II – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 880
+ 002077\nSpielinfo: https://www.fussball.de/spiel/eintracht-frankfurt-ii-vi
+ ktoria-berlin/-/spiel/031F0K6678000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/eintracht-frankfurt-ii-viktoria-berlin/-/
+ spiel/031F0K6678000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQRTK000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260802T130000
+DTEND;TZID=Europe/Berlin:20260802T153000
+SUMMARY:FC-V: ⚽ TSG 1899 Hoffenheim II – Viktoria Berlin (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nTSG 1899 
+ Hoffenheim II – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070004\
+ nSpielinfo: https://www.fussball.de/spiel/tsg-hoffenheim-u20-2-viktoria-be
+ rlin/-/spiel/031E0EQRTK000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/tsg-hoffenheim-u20-2-viktoria-berlin/-/sp
+ iel/031E0EQRTK000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQS1S000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260809T130000
+DTEND;TZID=Europe/Berlin:20260809T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – VfL Bochum (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – VfL Bochum (Heimspiel)\nSpielnummer 890070008\nSpielinfo: https
+ ://www.fussball.de/spiel/viktoria-berlin-vfl-bochum-1848/-/spiel/031E0EQS1
+ S000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-vfl-bochum-1848/-/spiel/0
+ 31E0EQS1S000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031FM5N10C000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260816T130000
+DTEND;TZID=Europe/Berlin:20260816T153000
+SUMMARY:FC-V: ⚽ VfR SW Warbeyen 1945 e.V. – Viktoria Berlin (Anstoß 14
+ :00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nDFB-Pokal\nVfR SW Warbe
+ yen 1945 e.V. – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 870026006\
+ nSpielinfo: https://www.fussball.de/spiel/vfr-sw-warbeyen-1945-ev-viktoria
+ -berlin/-/spiel/031FM5N10C000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/vfr-sw-warbeyen-1945-ev-viktoria-berlin/-
+ /spiel/031FM5N10C000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQS7O000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260823T130000
+DTEND;TZID=Europe/Berlin:20260823T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – SG 99 Andernach (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – SG 99 Andernach (Heimspiel)\nSpielnummer 890070015\nSpielinfo: 
+ https://www.fussball.de/spiel/viktoria-berlin-sg-99-andernach/-/spiel/031E
+ 0EQS7O000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-sg-99-andernach/-/spiel/0
+ 31E0EQS7O000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQSJO000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260830T130000
+DTEND;TZID=Europe/Berlin:20260830T153000
+SUMMARY:FC-V: ⚽ 1. FC Köln II – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\n1. FC Kö
+ ln II – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070028\nSpielin
+ fo: https://www.fussball.de/spiel/1-fc-koeln-u20-viktoria-berlin/-/spiel/0
+ 31E0EQSJO000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/1-fc-koeln-u20-viktoria-berlin/-/spiel/03
+ 1E0EQSJO000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQSKO000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260906T130000
+DTEND;TZID=Europe/Berlin:20260906T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – SV Meppen (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – SV Meppen (Heimspiel)\nSpielnummer 890070029\nSpielinfo: https:
+ //www.fussball.de/spiel/viktoria-berlin-sv-meppen-1912-ev/-/spiel/031E0EQS
+ KO000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-sv-meppen-1912-ev/-/spiel
+ /031E0EQSKO000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQSUO000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260913T130000
+DTEND;TZID=Europe/Berlin:20260913T153000
+SUMMARY:FC-V: ⚽ SC Sand – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nSC Sand 
+ – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070039\nSpielinfo: ht
+ tps://www.fussball.de/spiel/sc-sand-viktoria-berlin/-/spiel/031E0EQSUO0000
+ 00VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/sc-sand-viktoria-berlin/-/spiel/031E0EQSU
+ O000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQT4G000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260919T130000
+DTEND;TZID=Europe/Berlin:20260919T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – SGS Essen (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – SGS Essen (Heimspiel)\nSpielnummer 890070044\nSpielinfo: https:
+ //www.fussball.de/spiel/viktoria-berlin-sgs-essen/-/spiel/031E0EQT4G000000
+ VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-sgs-essen/-/spiel/031E0EQ
+ T4G000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031TGJ1CLK000000VS5489BUVSORQI22@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20260927T130000
+DTEND;TZID=Europe/Berlin:20260927T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – Bayer 04 Leverkusen (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\nDFB-Pokal\nViktoria Ber
+ lin – Bayer 04 Leverkusen (Heimspiel)\nSpielnummer 870026032\nSpielinfo:
+  https://www.fussball.de/spiel/viktoria-berlin-bayer-04-leverkusen/-/spiel
+ /031TGJ1CLK000000VS5489BUVSORQI22
+URL:https://www.fussball.de/spiel/viktoria-berlin-bayer-04-leverkusen/-/spi
+ el/031TGJ1CLK000000VS5489BUVSORQI22
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Stadion Lichterfelde NR1\, Ostpreußendamm 3-17\, 122
+ 07 Berlin
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQTD8000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261004T130000
+DTEND;TZID=Europe/Berlin:20261004T153000
+SUMMARY:FC-V: ⚽ Borussia Mönchengladbach – Viktoria Berlin (Anstoß 14
+ :00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nBorussia 
+ Mönchengladbach – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 8900700
+ 51\nSpielinfo: https://www.fussball.de/spiel/borussia-moenchengladbach-vik
+ toria-berlin/-/spiel/031E0EQTD8000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/borussia-moenchengladbach-viktoria-berlin
+ /-/spiel/031E0EQTD8000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Grenzlandstadion\, Jahnplatz 1\, 41236 Mönchengladba
+ ch
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQU1S000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261025T130000
+DTEND;TZID=Europe/Berlin:20261025T153000
+SUMMARY:FC-V: ⚽ FC Carl Zeiss Jena – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nFC Carl Z
+ eiss Jena – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070067\nSpi
+ elinfo: https://www.fussball.de/spiel/fc-carl-zeiss-jena-viktoria-berlin/-
+ /spiel/031E0EQU1S000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/fc-carl-zeiss-jena-viktoria-berlin/-/spie
+ l/031E0EQU1S000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Ernst-Abbe-Sportfeld\, Roland-Ducke-Weg 1\, 07745 Jen
+ a
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQU88000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261108T130000
+DTEND;TZID=Europe/Berlin:20261108T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – Hertha BSC (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – Hertha BSC (Heimspiel)\nSpielnummer 890070072\nSpielinfo: https
+ ://www.fussball.de/spiel/viktoria-berlin-hertha-bsc/-/spiel/031E0EQU880000
+ 00VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-hertha-bsc/-/spiel/031E0E
+ QU88000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Stadion Lichterfelde NR1\, Ostpreußendamm 3-17\, 122
+ 07 Berlin
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQULS000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261114T130000
+DTEND;TZID=Europe/Berlin:20261114T153000
+SUMMARY:FC-V: ⚽ Eintracht Frankfurt II – Viktoria Berlin (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nEintracht
+  Frankfurt II – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070081\
+ nSpielinfo: https://www.fussball.de/spiel/eintracht-frankfurt-ii-viktoria-
+ berlin/-/spiel/031E0EQULS000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/eintracht-frankfurt-ii-viktoria-berlin/-/
+ spiel/031E0EQULS000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, RP F-Rödelheim (Brentano)\, Rödelheimer Parkweg\, 6
+ 0489 Frankfurt am Main
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQUS0000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261122T130000
+DTEND;TZID=Europe/Berlin:20261122T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – 1. FFC Turbine Potsdam (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – 1. FFC Turbine Potsdam (Heimspiel)\nSpielnummer 890070085\nSpie
+ linfo: https://www.fussball.de/spiel/viktoria-berlin-1ffc-turbine-potsdam/
+ -/spiel/031E0EQUS0000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-1ffc-turbine-potsdam/-/sp
+ iel/031E0EQUS0000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Stadion Lichterfelde NR1\, Ostpreußendamm 3-17\, 122
+ 07 Berlin
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQV6O000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261213T130000
+DTEND;TZID=Europe/Berlin:20261213T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – TSG 1899 Hoffenheim II (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – TSG 1899 Hoffenheim II (Heimspiel)\nSpielnummer 890070092\nSpie
+ linfo: https://www.fussball.de/spiel/viktoria-berlin-tsg-hoffenheim-u20-2/
+ -/spiel/031E0EQV6O000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-tsg-hoffenheim-u20-2/-/sp
+ iel/031E0EQV6O000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Stadion Lichterfelde NR1\, Ostpreußendamm 3-17\, 122
+ 07 Berlin
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0EQVKK000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20261220T130000
+DTEND;TZID=Europe/Berlin:20261220T153000
+SUMMARY:FC-V: ⚽ VfL Bochum – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nVfL Bochu
+ m – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070100\nSpielinfo: 
+ https://www.fussball.de/spiel/vfl-bochum-1848-viktoria-berlin/-/spiel/031E
+ 0EQVKK000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/vfl-bochum-1848-viktoria-berlin/-/spiel/0
+ 31E0EQVKK000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+LOCATION:Rasenplatz\, Lohrheidestadion\, Lohrheidestr. 82\, 44866 Bochum
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER004000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270131T130000
+DTEND;TZID=Europe/Berlin:20270131T153000
+SUMMARY:FC-V: ⚽ SG 99 Andernach – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nSG 99 And
+ ernach – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070106\nSpieli
+ nfo: https://www.fussball.de/spiel/sg-99-andernach-viktoria-berlin/-/spiel
+ /031E0ER004000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/sg-99-andernach-viktoria-berlin/-/spiel/0
+ 31E0ER004000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER0AC000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270207T130000
+DTEND;TZID=Europe/Berlin:20270207T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – 1. FC Köln II (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – 1. FC Köln II (Heimspiel)\nSpielnummer 890070113\nSpielinfo: h
+ ttps://www.fussball.de/spiel/viktoria-berlin-1-fc-koeln-u20/-/spiel/031E0E
+ R0AC000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-1-fc-koeln-u20/-/spiel/03
+ 1E0ER0AC000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER0MS000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270214T130000
+DTEND;TZID=Europe/Berlin:20270214T153000
+SUMMARY:FC-V: ⚽ SV Meppen – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nSV Meppen
+  – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070121\nSpielinfo: h
+ ttps://www.fussball.de/spiel/sv-meppen-1912-ev-viktoria-berlin/-/spiel/031
+ E0ER0MS000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/sv-meppen-1912-ev-viktoria-berlin/-/spiel
+ /031E0ER0MS000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER110000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270221T130000
+DTEND;TZID=Europe/Berlin:20270221T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – SC Sand (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – SC Sand (Heimspiel)\nSpielnummer 890070127\nSpielinfo: https://
+ www.fussball.de/spiel/viktoria-berlin-sc-sand/-/spiel/031E0ER110000000VS54
+ 89BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-sc-sand/-/spiel/031E0ER11
+ 0000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER1KS000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270314T130000
+DTEND;TZID=Europe/Berlin:20270314T153000
+SUMMARY:FC-V: ⚽ SGS Essen – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nSGS Essen
+  – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070138\nSpielinfo: h
+ ttps://www.fussball.de/spiel/sgs-essen-viktoria-berlin/-/spiel/031E0ER1KS0
+ 00000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/sgs-essen-viktoria-berlin/-/spiel/031E0ER
+ 1KS000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER1RK000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270321T130000
+DTEND;TZID=Europe/Berlin:20270321T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – Borussia Mönchengladbach (Anstoß 14
+ :00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – Borussia Mönchengladbach (Heimspiel)\nSpielnummer 890070142\nS
+ pielinfo: https://www.fussball.de/spiel/viktoria-berlin-borussia-moencheng
+ ladbach/-/spiel/031E0ER1RK000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-borussia-moenchengladbach
+ /-/spiel/031E0ER1RK000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER2L0000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270403T130000
+DTEND;TZID=Europe/Berlin:20270403T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – FC Carl Zeiss Jena (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – FC Carl Zeiss Jena (Heimspiel)\nSpielnummer 890070156\nSpielinf
+ o: https://www.fussball.de/spiel/viktoria-berlin-fc-carl-zeiss-jena/-/spie
+ l/031E0ER2L0000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-fc-carl-zeiss-jena/-/spie
+ l/031E0ER2L0000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER3C8000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270411T130000
+DTEND;TZID=Europe/Berlin:20270411T153000
+SUMMARY:FC-V: ⚽ Hertha BSC – Viktoria Berlin (Anstoß 14:00)
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nHertha BS
+ C – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070168\nSpielinfo: 
+ https://www.fussball.de/spiel/hertha-bsc-viktoria-berlin/-/spiel/031E0ER3C
+ 8000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/hertha-bsc-viktoria-berlin/-/spiel/031E0E
+ R3C8000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER3G4000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270502T130000
+DTEND;TZID=Europe/Berlin:20270502T153000
+SUMMARY:FC-V: ⚽ Viktoria Berlin – Eintracht Frankfurt II (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\nViktoria 
+ Berlin – Eintracht Frankfurt II (Heimspiel)\nSpielnummer 890070170\nSpie
+ linfo: https://www.fussball.de/spiel/viktoria-berlin-eintracht-frankfurt-i
+ i/-/spiel/031E0ER3G4000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/viktoria-berlin-eintracht-frankfurt-ii/-/
+ spiel/031E0ER3G4000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:031E0ER48K000000VS5489BTVUS470OH@fussball-de-ics
+DTSTAMP:20260927T085347Z
+DTSTART;TZID=Europe/Berlin:20270509T130000
+DTEND;TZID=Europe/Berlin:20270509T153000
+SUMMARY:FC-V: ⚽ 1. FFC Turbine Potsdam – Viktoria Berlin (Anstoß 14:00
+ )
+DESCRIPTION:Treffen: 13:00 Uhr\nAnstoß: 14:00 Uhr\n2.Bundesliga\n1. FFC Tu
+ rbine Potsdam – Viktoria Berlin (Auswärtsspiel)\nSpielnummer 890070181\
+ nSpielinfo: https://www.fussball.de/spiel/1ffc-turbine-potsdam-viktoria-be
+ rlin/-/spiel/031E0ER48K000000VS5489BTVUS470OH
+URL:https://www.fussball.de/spiel/1ffc-turbine-potsdam-viktoria-berlin/-/sp
+ iel/031E0ER48K000000VS5489BTVUS470OH
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
