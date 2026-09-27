@@ -92,6 +92,7 @@
   li.abgesagt .gegner { text-decoration: line-through; }
   .marke { color: var(--abgesagt); font-weight: 600; }
   .leer { padding: 1rem 1.1rem; margin: 0; }
+  .kaffee { margin-top: 2.5rem; }
   footer { margin-top: 2rem; font-size: .875rem; color: var(--tinte-weich); }
   footer a { color: inherit; }
 </style>
@@ -124,6 +125,11 @@
   <section aria-labelledby="naechste">
     <h2 id="naechste">Nächste Spiele</h2>
     <ol id="liste"><li class="leer">Spiele werden geladen …</li></ol>
+  </section>
+
+  <section class="kaffee" aria-labelledby="unterstuetzen">
+    <h2 id="unterstuetzen">Du möchtest das Projekt unterstützen?</h2>
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="wanjascholz" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="Buy me a coffee :-)" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
   </section>
 
   <footer>Quelle: <a href="https://www.fussball.de" rel="noopener">fussball.de</a>. Verlegungen erscheinen nach dem nächsten Abgleich automatisch im Kalender.</footer>
@@ -248,5 +254,6 @@
     .catch(() => zeigeFehler("Noch keine Kalender vorhanden. Bitte den Workflow einmal im Tab „Actions“ starten."));
 })();
 </script>
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="wanjascholz" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
