@@ -17,6 +17,7 @@
     --knopf: #1c6fa8;
     --weiss: #ffffff;
     --abgesagt: #b3261e;
+    --gruen: #1e7b34;
     --kondensiert: "Barlow Condensed", "Arial Narrow", sans-serif;
     --text: "Barlow", system-ui, sans-serif;
   }
@@ -41,8 +42,6 @@
     padding: .55rem 1rem;
   }
   .wahl button[aria-pressed="true"] { background: var(--himmel); border-color: var(--himmel); }
-  .mehrere { font-size: .9375rem; color: var(--tinte-weich); margin: -1.75rem 0 2.5rem; }
-  .mehrere[hidden] { display: none; }
   header { border-left: 6px solid var(--himmel); padding-left: 1rem; margin-bottom: 2rem; }
   h1 {
     font: 800 clamp(2.6rem, 11vw, 4.2rem)/0.92 var(--kondensiert);
@@ -51,21 +50,30 @@
   }
   .unter { margin: 0; color: var(--tinte-weich); }
 
-  .abo { display: grid; gap: .75rem; margin-bottom: .75rem; }
+  .abo { display: grid; gap: .75rem; margin-bottom: 2.5rem; }
   .knopf {
     display: block; text-decoration: none; text-align: center;
     font: 600 1.125rem/1.2 var(--text);
     padding: 1rem 1.25rem; border-radius: 12px;
     background: var(--knopf); color: var(--weiss);
   }
+  button.knopf { width: 100%; border: 0; cursor: pointer; }
+  .knopf[hidden] { display: none; }
   .knopf.zweit { background: var(--weiss); color: var(--knopf); box-shadow: inset 0 0 0 2px var(--knopf); }
   .knopf:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--tinte); outline-offset: 3px; }
-  .hinweis { font-size: .9375rem; color: var(--tinte-weich); margin: 0 0 2.5rem; }
-  .hinweis button {
-    font: inherit; color: var(--knopf); background: none; border: 0; padding: 0;
+
+  .google-hinweis {
+    background: var(--weiss); border-left: 6px solid var(--knopf); border-radius: 12px;
+    padding: 1rem 1.1rem; margin: -1.75rem 0 2.5rem;
+  }
+  .google-hinweis[hidden] { display: none; }
+  .google-hinweis p { margin: 0 0 .6rem; }
+  .google-hinweis .link { font-size: .9375rem; color: var(--tinte-weich); word-break: break-all; }
+  .aktionen { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; align-items: center; }
+  .aktionen button, .aktionen a {
+    font: 600 1rem/1.3 var(--text); color: var(--knopf); background: none; border: 0; padding: 0;
     text-decoration: underline; cursor: pointer;
   }
-
   h2 { font: 600 1.6rem/1.1 var(--kondensiert); margin: 0 0 .75rem; }
   ol { list-style: none; margin: 0; padding: 0; background: var(--weiss); border-radius: 12px; }
   li { display: grid; grid-template-columns: 5.25rem 1fr; gap: 1rem; padding: 1rem 1.1rem; }
@@ -73,7 +81,7 @@
   .tag { font: 800 1.35rem/1 var(--kondensiert); }
   .tag small { display: block; font: 500 .9375rem/1.3 var(--text); color: var(--tinte-weich); margin-top: .25rem; }
   .gegner { font-weight: 600; margin: 0; }
-  .treffen { margin: .1rem 0 0; font-weight: 500; }
+  .treffen { margin: .1rem 0 0; font-weight: 600; color: var(--gruen); }
   .art { font-size: .9375rem; color: var(--tinte-weich); margin: .1rem 0 0; }
   .art a { color: inherit; }
   li.abgesagt .gegner { text-decoration: line-through; }
@@ -96,14 +104,17 @@
   </header>
 
   <div class="abo">
-    <a class="knopf" id="ios" href="#">Im iPhone-Kalender abonnieren</a>
-    <a class="knopf zweit" id="google" href="#" target="_blank" rel="noopener">In Google Kalender abonnieren (Android)</a>
+    <a class="knopf" id="abo" href="#">Im iPhone-Kalender abonnieren</a>
+    <a class="knopf zweit" id="google" href="#" target="_blank" rel="noopener">In Google Kalender abonnieren</a>
   </div>
-  <p class="hinweis">
-    Android: Der Google-Link öffnet sich im Browser. Nach „Hinzufügen“ erscheinen die Spiele nach ein paar Minuten in der Kalender-App.
-    Anderer Kalender? <button type="button" id="kopieren">Kalender-Link kopieren</button>
-  </p>
-  <p class="mehrere" id="mehrere" hidden>Mehrere Kinder im Verein? Oben die nächste Mannschaft wählen und ebenfalls abonnieren. Jede Mannschaft erscheint als eigener Kalender.</p>
+  <div class="google-hinweis" id="google-hinweis" role="status" hidden>
+    <p><strong>Google Kalender?</strong> Öffne diesen Link am Computer und füge die Termine dort zu deinem Kalender hinzu.</p>
+    <p class="link" id="seitenlink"></p>
+    <div class="aktionen">
+      <button type="button" id="kopieren">Link kopieren</button>
+      <a id="mailen" href="#">Per E-Mail an mich senden</a>
+    </div>
+  </div>
 
   <section aria-labelledby="naechste">
     <h2 id="naechste">Nächste Spiele</h2>
@@ -123,9 +134,38 @@
                    set(v) { try { localStorage.setItem("team", v); } catch {} } };
   let icsLink = "";
 
+  // Je nach Gerät die passenden Buttons zeigen
+  const ua = navigator.userAgent;
+  const istAndroid = /Android/i.test(ua);
+  const istApple = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  const istMobil = istAndroid || istApple || /Mobi/i.test(ua);
+  if (istAndroid) {
+    $("abo").hidden = true;  // Android kann Kalender nicht per Link abonnieren
+    $("google").className = "knopf";  // einziger Button, daher als Hauptbutton
+  } else if (!istApple) {
+    $("abo").textContent = "In Apple Kalender oder Outlook abonnieren";
+  }
+
+  // Google am Handy: Hinweis statt Link, der dort nichts tut
+  $("google").addEventListener("click", e => {
+    if (!istMobil) return;
+    e.preventDefault();
+    const seite = location.href;
+    $("seitenlink").textContent = seite;
+    $("mailen").href = "mailto:?subject=" + encodeURIComponent("Spielplan abonnieren")
+      + "&body=" + encodeURIComponent("Am Computer öffnen und auf „In Google Kalender abonnieren“ klicken:\n" + seite);
+    $("google-hinweis").hidden = false;
+    $("google-hinweis").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+
   $("kopieren").addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(icsLink); $("kopieren").textContent = "Link kopiert"; }
-    catch { prompt("Kalender-Link:", icsLink); }
+    const seite = location.href;
+    try {
+      await navigator.clipboard.writeText(seite);
+      $("kopieren").textContent = "Link kopiert";
+      setTimeout(() => { $("kopieren").textContent = "Link kopieren"; }, 2500);
+    }
+    catch { prompt("Link zu dieser Seite:", seite); }
   });
 
   function zeigeFehler(text) { $("liste").textContent = ""; $("liste").append(el("li", "leer", text)); }
@@ -134,9 +174,9 @@
     const ordner = new URL(team.kuerzel + "/", basis);
     icsLink = new URL("kalender.ics", ordner).href;
     const webcal = icsLink.replace(/^https?:/, "webcal:");
-    $("ios").href = webcal;
+    $("abo").href = webcal;
     $("google").href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
-    $("kopieren").textContent = "Kalender-Link kopieren";
+    $("google-hinweis").hidden = true;
     $("titel").textContent = team.name;
     document.title = team.name + " – Spielplan";
 
@@ -195,7 +235,6 @@
           $("teams").append(b);
         }
         $("wahl").hidden = false;
-        $("mehrere").hidden = false;
       }
       const gewuenscht = new URL(location.href).searchParams.get("team") || merken.get();
       waehle(mannschaften.find(t => t.kuerzel === gewuenscht) || mannschaften[0], mannschaften);
