@@ -348,10 +348,11 @@ def load_config(path: Path) -> list[dict]:
         if t.get("aktiv", True) is False:
             continue
         quelle = t.get("team_id") or t.get("fussball_de", "")
-        m = TEAM_RE.search(quelle) or re.fullmatch(r"[A-Z0-9]{20,}", quelle)
+        # tolerant: ganze Adresse, reine ID oder ID mit Resten wie "#!/"
+        m = TEAM_RE.search(quelle) or re.search(r"\b([A-Z0-9]{32})\b", quelle)
         if not m:
-            raise ValueError(f"Mannschaft {i}: keine team-id in {quelle!r} gefunden")
-        team_id = m.group(1) if m.re is TEAM_RE else m.group(0)
+            raise ValueError(f"Mannschaft {i} ({t.get('name', '?')}): keine team-id in {quelle!r} gefunden")
+        team_id = m.group(1)
         name = t.get("name") or f"Mannschaft {i}"
         k = slug(t.get("kuerzel") or name)
         if k in kuerzel_gesehen:

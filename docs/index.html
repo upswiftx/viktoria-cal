@@ -34,17 +34,22 @@
 
   .wahl { margin: 0 0 1.75rem; }
   .wahl[hidden] { display: none; }
-  .wahl p { margin: 0 0 .5rem; font-size: .9375rem; color: var(--tinte-weich); }
-  .wahl div { display: flex; flex-wrap: wrap; gap: .5rem; }
-  .wahl button {
-    font: 600 1rem/1.2 var(--text); color: var(--tinte); cursor: pointer;
-    background: var(--weiss); border: 2px solid var(--himmel); border-radius: 999px;
-    padding: .55rem 1rem;
+  .wahl label { display: block; margin: 0 0 .4rem; font-size: .9375rem; color: var(--tinte-weich); }
+  .wahl select {
+    appearance: none; -webkit-appearance: none;
+    width: 100%; min-height: 3.25rem;
+    font: 600 1.0625rem/1.2 var(--text); color: var(--tinte);
+    background: var(--weiss) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 7.5l5 5 5-5' fill='none' stroke='%230f2a44' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 1rem center / 1.25rem;
+    border: 2px solid var(--himmel); border-radius: 12px;
+    padding: .8rem 3rem .8rem 1rem; cursor: pointer;
+    box-shadow: 0 1px 2px rgba(15, 42, 68, .06);
+    transition: border-color .15s;
   }
-  .wahl button[aria-pressed="true"] { background: var(--himmel); border-color: var(--himmel); }
+  .wahl select:hover { border-color: var(--knopf); }
+  .wahl select:focus-visible { outline: 3px solid var(--tinte); outline-offset: 2px; border-color: var(--knopf); }
   header { border-left: 6px solid var(--himmel); padding-left: 1rem; margin-bottom: 2rem; }
   h1 {
-    font: 800 clamp(2.6rem, 11vw, 4.2rem)/0.92 var(--kondensiert);
+    font: 800 clamp(2rem, 8vw, 3rem)/0.95 var(--kondensiert);
     margin: 0 0 .5rem;
     letter-spacing: -0.01em;
   }
@@ -93,10 +98,10 @@
 </head>
 <body>
 <main>
-  <nav class="wahl" id="wahl" aria-label="Mannschaft wählen" hidden>
-    <p>Mannschaft wählen</p>
-    <div id="teams"></div>
-  </nav>
+  <div class="wahl" id="wahl" hidden>
+    <label for="teams">Mannschaft</label>
+    <select id="teams"></select>
+  </div>
 
   <header>
     <h1 id="titel">Spielplan</h1>
@@ -180,7 +185,7 @@
     $("titel").textContent = team.name;
     document.title = team.name + " – Spielplan";
 
-    for (const b of $("teams").children) b.setAttribute("aria-pressed", String(b.dataset.kuerzel === team.kuerzel));
+    $("teams").value = team.kuerzel;
     merken.set(team.kuerzel);
     if (alle.length > 1) {
       const url = new URL(location.href); url.searchParams.set("team", team.kuerzel);
@@ -229,11 +234,12 @@
       if (!mannschaften || !mannschaften.length) throw new Error("leer");
       if (mannschaften.length > 1) {
         for (const t of mannschaften) {
-          const b = el("button", "", t.name);
-          b.type = "button"; b.dataset.kuerzel = t.kuerzel;
-          b.addEventListener("click", () => waehle(t, mannschaften));
-          $("teams").append(b);
+          const o = el("option", "", t.name);
+          o.value = t.kuerzel;
+          $("teams").append(o);
         }
+        $("teams").addEventListener("change", e =>
+          waehle(mannschaften.find(t => t.kuerzel === e.target.value), mannschaften));
         $("wahl").hidden = false;
       }
       const gewuenscht = new URL(location.href).searchParams.get("team") || merken.get();
