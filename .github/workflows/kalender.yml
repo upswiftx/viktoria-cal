@@ -1,0 +1,45 @@
+name: Spielplan-Kalender aktualisieren
+
+on:
+  schedule:
+    # GitHub rechnet in UTC: 04:15 UTC = 06:15 (Sommerzeit) bzw. 05:15 (Winterzeit)
+    - cron: "15 4 * * *"
+    - cron: "15 15 * * *"
+  workflow_dispatch:   # manuell starten über den Tab "Actions"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kalender
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Spielpläne von fussball.de holen
+        # Mannschaften und Einstellungen stehen in mannschaften.json
+        run: python fussball_ics.py --config mannschaften.json --out docs
+
+      - name: Änderungen speichern
+        if: always()   # auch speichern, wenn eine Mannschaft fehlgeschlagen ist
+        run: |
+          git config user.name "kalender-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen am Spielplan."
+          else
+            git commit -m "Spielplan aktualisiert"
+            git push
+          fi
