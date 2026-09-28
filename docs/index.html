@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script data-goatcounter="https://upswiftx.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
   :root {
     --himmel: #8ccbeb;
@@ -147,6 +148,10 @@
   const merken = { get() { try { return localStorage.getItem("team"); } catch { return null; } },
                    set(v) { try { localStorage.setItem("team", v); } catch {} } };
   let icsLink = "";
+  let teamKuerzel = "";
+  // Klick als Ereignis an GoatCounter melden, z. B. "abo/e15/apple"
+  const zaehle = was => { try { window.goatcounter.count({ path: `abo/${teamKuerzel}/${was}`, event: true }); } catch {} };
+  $("abo").addEventListener("click", () => zaehle("apple"));
   let geladeneSpiele = null;
 
   // Alle Zeiten in spiele.json sind deutsche Ortszeit, egal wo das Gerät steht
@@ -191,7 +196,8 @@
 
   // Google am Handy: Hinweis statt Link, der dort nichts tut
   $("google").addEventListener("click", e => {
-    if (!istMobil) return;
+    if (!istMobil) { zaehle("google"); return; }
+    zaehle("google-hinweis");
     e.preventDefault();
     const seite = location.href;
     $("seitenlink").textContent = seite;
@@ -223,6 +229,7 @@
     $("titel").textContent = team.name;
     document.title = team.name + " – Spielplan";
 
+    teamKuerzel = team.kuerzel;
     $("teams").value = team.kuerzel;
     merken.set(team.kuerzel);
     if (alle.length > 1) {
