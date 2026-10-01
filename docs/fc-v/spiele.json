@@ -2,19 +2,6 @@
   "kalender": "FC Viktoria Berlin",
   "spiele": [
     {
-      "datum": "2026-05-03",
-      "anstoss": "14:00",
-      "treffen": "13:00",
-      "heim": "Borussia Mönchengladbach",
-      "gast": "Viktoria Berlin",
-      "heimspiel": false,
-      "gegner": "Borussia Mönchengladbach",
-      "wettbewerb": "2.Bundesliga",
-      "ort": "",
-      "abgesagt": false,
-      "link": "https://www.fussball.de/spiel/borussia-moenchengladbach-viktoria-berlin/-/spiel/02TQ8EVDDK000000VS5489BTVV0LE4BT"
-    },
-    {
       "datum": "2026-05-10",
       "anstoss": "14:00",
       "treffen": "13:00",
