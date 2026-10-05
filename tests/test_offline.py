@@ -12,7 +12,13 @@ T = "https://www.fussball.de/mannschaft/x/-/saison/2627/team-id/"
 S = "https://www.fussball.de/spiel/x/-/spiel/"
 
 
-def game_rows(date, time_, comp, nr, home, hid, away, aid, sid, extra=""):
+def club(name, tid):
+    return f'<a href="{T}{tid}" class="club-wrapper"><div class="club-logo"></div><div class="club-name">{name}</div></a>'
+
+
+def game_rows(date, time_, comp, nr, home, hid, away, aid, sid, extra="", home_cell=None, away_cell=None):
+    home_cell = home_cell or club(home, hid)
+    away_cell = away_cell or club(away, aid)
     return f"""
 <tr class="odd row-headline visible-small"><td colspan="6">Samstag, {date}.2026 - {time_} Uhr | {comp}</td></tr>
 <tr class="odd row-competition hidden-small">
@@ -22,9 +28,9 @@ def game_rows(date, time_, comp, nr, home, hid, away, aid, sid, extra=""):
 </tr>
 <tr class="odd">
   <td class="hidden-small"></td>
-  <td class="column-club"><a href="{T}{hid}" class="club-wrapper"><div class="club-logo"></div><div class="club-name">{home}</div></a></td>
+  <td class="column-club">{home_cell}</td>
   <td class="column-colon">:</td>
-  <td class="column-club no-border"><a href="{T}{aid}" class="club-wrapper"><div class="club-name">{away}</div></a></td>
+  <td class="column-club no-border">{away_cell}</td>
   <td class="column-score"><a href="{S}{sid}"><span data-obfuscation="x">&#xE6A1;</span></a></td>
   <td class="column-detail"><a href="{S}{sid}">Zum Spiel</a></td>
 </tr>"""
@@ -46,7 +52,36 @@ SPIELSEITE = ('<a href="https://www.google.de/maps?q=Ostpreu%C3%9Fendamm+3-17">'
               'Kunstrasenplatz, Stadion Lichterfelde KR1, Ostpreußendamm 3-17, 12207 Berlin</a>')
 
 
+def test_unverlinkter_gegner():
+    """Gegner ohne Mannschaftsseite: <a> ohne href, nur Text oder nur /verein/-Link."""
+    V = "https://www.fussball.de/verein/x/-/id/00ES8GNCAC00003IVV0AG08LVUPGND5I"
+    plan = "<table>" + "".join([
+        # wie live bei FC Ingolstadt 04: club-wrapper ohne href
+        game_rows("17.10", "14:00", "2.Bundesliga", "890070058", "Viktoria Berlin", OWN, "", "",
+                  "031E0EQTM4000000VS5489BTVUS470OH",
+                  away_cell='<a class="club-wrapper"><div class="club-logo"></div>'
+                            '<div class="club-name">FC Ingolstadt 04</div></a>'),
+        # Gegner nur als Text, auswärts
+        game_rows("24.10", "13:00", "2.Bundesliga", "890070059", "", "", "Viktoria Berlin", OWN,
+                  "031E0EQTM5000000VS5489BTVUS470OH", home_cell=" SV Meppen \n"),
+        # Gegner nur mit Vereinslink, auswärts
+        game_rows("31.10", "11:00", "2.Bundesliga", "890070060", "", "", "Viktoria Berlin", OWN,
+                  "031E0EQTM6000000VS5489BTVUS470OH",
+                  home_cell=f'<a href="{V}"><div class="club-name">1. FC Union Berlin</div></a>'),
+    ]) + "</table>"
+    games = f.parse_matchplan(plan, OWN)
+    assert len(games) == 3, games
+    g1, g2, g3 = games
+    assert g1["is_home"] and g1["opponent"] == "FC Ingolstadt 04" and g1["own"] == "Viktoria Berlin"
+    assert (g1["home"], g1["away"]) == ("Viktoria Berlin", "FC Ingolstadt 04")
+    assert g1["id"] == "031E0EQTM4000000VS5489BTVUS470OH"
+    assert not g2["is_home"] and g2["opponent"] == "SV Meppen" and g2["home"] == "SV Meppen"
+    assert not g3["is_home"] and g3["opponent"] == "1. FC Union Berlin" and g3["away"] == "Viktoria Berlin"
+    print("OK – unverlinkter Gegner")
+
+
 def main():
+    test_unverlinkter_gegner()
     games = f.parse_matchplan(MATCHPLAN, OWN)
     assert len(games) == 4, games
     g1, g2, g3, g4 = games

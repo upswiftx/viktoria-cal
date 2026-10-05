@@ -87,6 +87,29 @@ def team_name(a) -> str:
     return clean((el or a).get_text(" ", strip=True))
 
 
+def row_teams(tr) -> tuple[tuple[str, str], tuple[str, str]] | None:
+    """(team_id, Name) für Heim und Gast; team_id ist "", wenn nicht verlinkt."""
+    cells = tr.select("td.column-club")
+    if len(cells) >= 2:
+        teams = []
+        for td in cells[:2]:
+            a = td.find("a", href=TEAM_RE)
+            tid = TEAM_RE.search(a["href"]).group(1) if a else ""
+            teams.append((tid, team_name(td)))
+        return tuple(teams) if all(name for _, name in teams) else None
+
+    # Rückfallebene ohne Mannschaftsspalten: Mannschafts-Links,
+    # doppelte (Logo + Name) zusammenfassen
+    teams, seen = [], set()
+    for a in tr.find_all("a", href=TEAM_RE):
+        tid = TEAM_RE.search(a["href"]).group(1)
+        if tid in seen:
+            continue
+        seen.add(tid)
+        teams.append((tid, team_name(a)))
+    return (teams[0], teams[1]) if len(teams) >= 2 else None
+
+
 def parse_matchplan(html: str, own_team_id: str) -> list[dict]:
     """Findet Datumszeilen und die jeweils folgende Begegnungszeile."""
     soup = BeautifulSoup(html, "html.parser")
@@ -111,21 +134,16 @@ def parse_matchplan(html: str, own_team_id: str) -> list[dict]:
             }
 
         spiel_a = tr.find("a", href=SPIEL_RE)
-        if not spiel_a or current is None:
+        if not spiel_a:
             continue
 
-        # Mannschafts-Links, doppelte (Logo + Name) zusammenfassen
-        teams, seen = [], set()
-        for a in tr.find_all("a", href=TEAM_RE):
-            tid = TEAM_RE.search(a["href"]).group(1)
-            if tid in seen:
-                continue
-            seen.add(tid)
-            teams.append((tid, team_name(a)))
-        if len(teams) < 2:
+        teams = row_teams(tr)
+        if current is None or not teams:
+            datum = current["date"].isoformat() if current else "?"
+            print(f"  Warnung: Spielzeile nicht übernommen ({datum}): {text}", file=sys.stderr)
             continue
 
-        (home_id, home), (away_id, away) = teams[0], teams[1]
+        (home_id, home), (away_id, away) = teams
         spiel_id = SPIEL_RE.search(spiel_a["href"]).group(1)
         href = spiel_a["href"]
         url = href if href.startswith("http") else BASE + href
