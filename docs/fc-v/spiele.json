@@ -210,6 +210,19 @@
       "link": "https://www.fussball.de/spiel/borussia-moenchengladbach-viktoria-berlin/-/spiel/031E0EQTD8000000VS5489BTVUS470OH"
     },
     {
+      "datum": "2026-10-18",
+      "anstoss": "14:00",
+      "treffen": "13:00",
+      "heim": "Viktoria Berlin",
+      "gast": "FC Ingolstadt 04",
+      "heimspiel": true,
+      "gegner": "FC Ingolstadt 04",
+      "wettbewerb": "2.Bundesliga",
+      "ort": "Rasenplatz, Stadion Lichterfelde NR1, Ostpreußendamm 3-17, 12207 Berlin",
+      "abgesagt": false,
+      "link": "https://www.fussball.de/spiel/viktoria-berlin-fc-ingolstadt-04/-/spiel/031E0EQTM4000000VS5489BTVUS470OH"
+    },
+    {
       "datum": "2026-10-25",
       "anstoss": "14:00",
       "treffen": "13:00",
@@ -364,6 +377,19 @@
       "ort": "",
       "abgesagt": false,
       "link": "https://www.fussball.de/spiel/viktoria-berlin-borussia-moenchengladbach/-/spiel/031E0ER1RK000000VS5489BTVUS470OH"
+    },
+    {
+      "datum": "2027-03-28",
+      "anstoss": "14:00",
+      "treffen": "13:00",
+      "heim": "FC Ingolstadt 04",
+      "gast": "Viktoria Berlin",
+      "heimspiel": false,
+      "gegner": "FC Ingolstadt 04",
+      "wettbewerb": "2.Bundesliga",
+      "ort": "",
+      "abgesagt": false,
+      "link": "https://www.fussball.de/spiel/fc-ingolstadt-04-viktoria-berlin/-/spiel/031E0ER264000000VS5489BTVUS470OH"
     },
     {
       "datum": "2027-04-03",
