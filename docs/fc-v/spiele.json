@@ -2,19 +2,6 @@
   "kalender": "FC Viktoria Berlin",
   "spiele": [
     {
-      "datum": "2026-05-10",
-      "anstoss": "14:00",
-      "treffen": "13:00",
-      "heim": "Viktoria Berlin",
-      "gast": "VfR SW Warbeyen 1945 e.V.",
-      "heimspiel": true,
-      "gegner": "VfR SW Warbeyen 1945 e.V.",
-      "wettbewerb": "2.Bundesliga",
-      "ort": "",
-      "abgesagt": false,
-      "link": "https://www.fussball.de/spiel/viktoria-berlin-vfr-sw-warbeyen-1945-ev/-/spiel/02TQ8EVDPG000000VS5489BTVV0LE4BT"
-    },
-    {
       "datum": "2026-05-17",
       "anstoss": "14:00",
       "treffen": "13:00",
