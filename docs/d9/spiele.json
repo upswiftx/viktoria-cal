@@ -2,19 +2,6 @@
   "kalender": "Viktoria Berlin IX (D9)",
   "spiele": [
     {
-      "datum": "2026-06-21",
-      "anstoss": "12:00",
-      "treffen": "11:00",
-      "heim": "Viktoria Berlin IX",
-      "gast": "FC Hertha 03 IV",
-      "heimspiel": true,
-      "gegner": "FC Hertha 03 IV",
-      "wettbewerb": "Kreisklasse C",
-      "ort": "",
-      "abgesagt": false,
-      "link": "https://www.fussball.de/spiel/viktoria-berlin-ix-fc-hertha-03-iv/-/spiel/02VPIDPJSK000000VS5489BUVVEJAKID"
-    },
-    {
       "datum": "2026-09-12",
       "anstoss": "09:00",
       "treffen": "08:00",
