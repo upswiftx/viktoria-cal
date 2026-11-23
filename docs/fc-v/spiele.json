@@ -249,6 +249,19 @@
       "link": "https://www.fussball.de/spiel/viktoria-berlin-1ffc-turbine-potsdam/-/spiel/031E0EQUS0000000VS5489BTVUS470OH"
     },
     {
+      "datum": "2026-12-04",
+      "anstoss": "12:00",
+      "treffen": "11:00",
+      "heim": "1. FC Union Berlin",
+      "gast": "Viktoria Berlin",
+      "heimspiel": false,
+      "gegner": "1. FC Union Berlin",
+      "wettbewerb": "Freundschaftsspiele",
+      "ort": "Rasenplatz, Fritz-Lesch-Sp. NR1, Dörpfeldstr. 89, 12489 Berlin",
+      "abgesagt": false,
+      "link": "https://www.fussball.de/spiel/1-fc-union-berlin-viktoria-berlin/-/spiel/032PRHUQI8000000VS5489BTVSIO88SN"
+    },
+    {
       "datum": "2026-12-13",
       "anstoss": "14:00",
       "treffen": "13:00",
